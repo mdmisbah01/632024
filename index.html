@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <title>JS</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+  </head>
+  <body>
+
+
+ <div class="container">
+  
+ 
+  <!-- variable -->
+    <h2 class="text-danger">click the button to calculate the data</h2>
+    <button class="btn btn-dark" onclick="calculation()">calculation</button>
+    <h3 id="value">value</h3>
+    <hr>
+  <!-- show/hide -->
+       <h2 class="text-danger">click the button to show/hide the element</h2>
+    <button class="btn btn-dark" onclick="textShow()">Show</button>
+    <button class="btn btn-dark" onclick="textHide()">Hide</button>
+    <h3 id="text">Lorem ipsum dolor sit.</h3>
+
+    <hr>  
+    <!-- color change -->
+    <h2 class="text-danger">click the button to change the color</h2>
+    <button class="btn btn-dark" onmousemove="colorChange()">Change Color</button>
+    <h3 id="c_c">Lorem, ipsum, dolor.</h3>
+  <hr>  
+
+   <!-- bulb On/off -->
+  <h2 class="text-danger">click the button to on/off the bulb</h2>
+   <button class="btn btn-dark" onclick="bulbOn()">Bulb On</button>
+   <button class="btn btn-dark" onclick="bulbOff()">Bulb Off</button>
+
+   <img id="bulb" src="images/off.gif" alt="">
+  <hr>
+
+  <!-- Show date -->
+   <h2 class="text-danger">click the button to show the date</h2>
+   <button class="btn btn-dark" onclick="showDate()">Show Date</button>
+  <h3 id="s_d">Show Date</h3>
+   <hr>
+
+  <!-- text change -->
+   <h2 class="text-danger">click the button to change the text</h2>
+   <button class="btn btn-dark" onclick="textChange()">Text change</button>
+   <h3 id="t_c">Lorem, ipsum, dolor.</h3>
+
+   <hr>
+
+
+
+
+   <h2 class="text-danger">What Can JavaScript Do?</h2>
+
+  <p id="demo">JavaScript can change HTML content.</p>
+
+<button class="btn btn-dark"  onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+<hr>
+
+
+
+
+<h1 class="text-danger">JavaScript HTML Events</h1>
+<h2 class="text-danger">The onclick Attribute</h2>
+
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p id="demo"></p>
+
+<hr>
+
+
+
+<input type="text" onpaste="myFunction()" value="Paste something here" size="40">
+
+<p id="demo"></p>
+
+<hr>
+<h1 class="text-danger">HTML DOM Events</h1>
+<h2>The blur Event</h2>
+
+Enter your name: <input type="text" id="fname" onblur="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<hr>
+
+
+
+
+<p class="text-danger">Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi</option>
+  <option value="BMW">BMW</option>
+  <option value="Mercedes">Mercedes</option>
+  <option value="Volvo">Volvo</option>
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo"></p>
+<hr>
+
+
+
+
+<p class="text-danger">Assign an "onended" event to an audio element.</p>
+
+<p>Press play and wait for the audio to end.</p>
+
+<audio controls onended="myFunction()">
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<p id="demo"></p>
+<hr>
+
+
+
+<h2 class="text-danger">The focus Event</h2>
+
+Enter your name: <input type="text" onfocus="myFunction(this)">
+
+<p>When the input field gets focus, a function changes the background-color.</p>
+
+<hr>
+
+
+
+<p class="text-danger">When you submit the form, a function is triggered which alerts some text.</p>
+
+<form action="/action_page.php" onsubmit="myFunction()">
+  Enter name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function myFunction() {
+  alert("The form was submitted");
+}
+</script>
+
+<p class="text-danger">Open the details.</p>
+
+<details ontoggle="myFunction()">
+<summary>Copyright 1999-2014.</summary>
+<p> - by Refsnes Data. All Rights Reserved.</p>
+<p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+</details>
+
+<script>
+function myFunction() {
+  alert("The ontoggle event occured");
+}
+</script>
+
+
+
+
+<hr>
+<h2 class="text-danger">The focusin Event</h2>
+
+Enter your name: <input type="text" onfocusin="myFunction(this)">
+
+
+
+<hr>
+
+<p>Press a key in the input field:</p>
+
+<input type="text" onkeydown="myFunction()">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "You pressed a key inside the input field";
+}
+</script>
+
+
+<hr>
+
+<style> 
+#myDIV {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s;
+}
+
+#myDIV:hover {
+  width: 400px;
+}
+</style>
+<p>Hover over the div element below, and wait for the transition effect to end.</p>
+
+<div id="myDIV"></div>
+
+<hr>
+
+
+<h2 class="text-danger">The focus Event</h2>
+
+Enter your name: <input type="text" onfocus="myFunction(this)">
+
+<p>When the input field gets focus, a function changes the background-color.</p>
+
+
+
+
+
+<body>
+ </div>
+<!-- js links -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
